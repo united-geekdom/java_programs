@@ -4,12 +4,12 @@ public class database {
 static String firstName;
 static String lastName;
 static String lang;
-static int exp;
-  public database(String name1, String name2, String myLang, int myExp) {
+static String exp;
+  public database(String name1, String name2, String myLang, String myExp) {
     firstName = "First name: " + name1;
     lastName = "Last name: " + name2;
     lang = "Languages known: " + myLang;
-    String exp = "Years of experience: " + myExp;
+    exp = "Years of experience: " + myExp;
     int loop = Math.max(Math.max(firstName.length(), lastName.length()), Math.max(lang.length(), exp.length()));
     int i = 0;
     do {
@@ -41,7 +41,7 @@ static int exp;
     String userLang = input3.nextLine();
     Scanner input4 = new Scanner(System.in);
     System.out.println("Enter your years of experience.");
-    int userExp = input4.nextInt();
+    String userExp = input4.nextLine();
     System.out.println("Your database");
     database myDatabase = new database(userFirstName, userLastName, userLang, userExp);
   }
